@@ -8,7 +8,7 @@
         tracking-widest text-slate-800 transition-all hover:border-cyan-600/60 hover:text-cyan-600/60
     }
     .contactInput {
-        @apply outline-none bg-slate-600/10 rounded-sm border-b px-6 py-4 border-slate-300
+        @apply outline-none bg-slate-600/10 rounded-sm border-b px-4 py-2 border-slate-300
         text-slate-600 placeholder-slate-400 transition-all focus:border-cyan-600/60 
         focus:text-cyan-600/60 hover:border-cyan-600/60
     }

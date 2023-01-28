@@ -3,8 +3,11 @@ import {
   PhoneIcon, MapPinIcon, EnvelopeIcon
 } from "@heroicons/react/24/solid"
 import { useForm, SubmitHandler } from "react-hook-form";
+import { PageInfo } from '@/typings';
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo;
+}
 
 type Inputs = {
   name: string;
@@ -13,7 +16,7 @@ type Inputs = {
   message: string;
 };
 
-const ContactMe = (props: Props) => {
+const ContactMe = ({ pageInfo }: Props) => {
   const { 
     register, 
     handleSubmit, 
@@ -26,27 +29,27 @@ const ContactMe = (props: Props) => {
   return (
     <div className='h-screen relative flex overflow-hidden flex-col text-center md:text-left
       md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
-      <h3 className='absolute top-24 uppercase tracking-[20px] text-slate-500 text-2xl'>
+      <h3 className='absolute top-16 uppercase tracking-[20px] text-slate-500 text-2xl'>
         Contact
       </h3>
-      <div className='flex flex-col space-y-2 lg:space-y-10'>
+      <div className='flex flex-col space-y-6'>
         <h4 className='text-4xl font-extrabold text-center'>
           I have got just what you need. &nbsp;
           <span className='decoration-[#0891b2] underline'>Let&apos;s Talk.</span>
         </h4>
 
-        <div className='space-y-10'>
+        <div className='space-y-4'>
           <div className='flex items-center space-x-5 justify-center'>
             <PhoneIcon className='text-[#0891b2] h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>+52 (686) 224-7294</p>
+            <p className='text-2xl'>{pageInfo.phoneNumber}</p>
           </div>
           <div className='flex items-center space-x-5 justify-center'>
             <EnvelopeIcon className='text-[#0891b2] h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>javhvac25@outlook.com</p>
+            <p className='text-2xl'>{pageInfo.email}</p>
           </div>
           <div className='flex items-center space-x-5 justify-center'>
             <MapPinIcon className='text-[#0891b2] h-7 w-7 animate-pulse' />
-            <p className='text-2xl'>Mexicali, B.C.</p>
+            <p className='text-2xl'>{pageInfo.address}</p>
           </div>
         </div>
 
@@ -77,7 +80,7 @@ const ContactMe = (props: Props) => {
 
           <button 
             type='submit' 
-            className='bg-cyan-600 py-5 px-10 rounded-md text-slate-100 font-bold'>
+            className='bg-cyan-600 py-4 px-10 rounded-md text-slate-100 font-bold'>
             Submit
           </button>
         </form>
