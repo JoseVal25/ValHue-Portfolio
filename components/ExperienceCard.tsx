@@ -14,10 +14,7 @@ const ExperienceCard = ({ experience }: Props) => {
         flex-shrink-0 w-[500px] 2xl:w-[550px] snap-center bg-slate-50 p-10 max-h-[550px]
         hover:opacity-100 opacity-50 cursor-pointer transition-opacity duration-200 overflow-hidden'>
        <motion.img 
-        initial={{
-            y: -100,
-            opacity: 0
-        }}
+        initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 1.2 }}
         whileInView={{ opacity:1, y: 0 }}
         viewport={{ once: true }}
