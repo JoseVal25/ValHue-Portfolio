@@ -16,7 +16,7 @@ const Projects = ({ projects }: Props) => {
             transition={{ duration: 1.5 }}
             className='h-screen relative flex overflow-hidden flex-col text-left
             max-w-full justify-evenly mx-auto items-center z-0'>
-            <h3 className='absolute top-16 uppercase tracking-[20px] text-slate-500 text-2xl'>
+            <h3 className='absolute top-16 uppercase tracking-[15px] md:tracking-[20px] text-slate-500 text-2xl'>
                 Projects
             </h3>
             <div className='relative w-full flex overflow-x-scroll 
@@ -24,29 +24,29 @@ const Projects = ({ projects }: Props) => {
             scrollbar-thumb-cyan-600/80'>
                 {projects?.map((project) => (
                     <div key={project._id} className='w-screen flex-shrink-0 snap-center flex flex-col 
-                        space-y-5 items-center justify-center p-20 h-screen'>
+                        space-y-5 items-center justify-center p-10 md:p-20 h-screen'>
                         <a href={project.linkToBuild} target="_blank" rel="noopener noreferrer" >
                             <motion.img
                                 initial={{ y: -300, opacity: 0 }}
                                 transition={{ duration: 1.2 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                                                               
+                                whileInView={{ opacity: 1, y: 0 }}                                      
                                 src={urlFor(project.image).url()} alt=''
                                 width={400}
                                 height={400}
+                                className="w-[300px] h-[200px] sm:w-[500px] sm:h-[300px]"
                             />
                         </a>
-                        <div className='space-y-8 px-0 md:px-10 max-w-6xl'>
-                            <h4 className='text-3xl font-extrabold text-center'>
+                        <div className='space-y-4 md:space-y-8 px-0 md:px-10 max-w-6xl'>
+                            <h4 className='text-xl sm:text-3xl font-extrabold text-center'>
                                 <span className='underline decoration-[#0891b2]'>
                                     Case Study {projects.indexOf(project) + 1} of {projects.length}
                                 </span>
                                 : {project.title}
                             </h4>
-                            <div className='flex space-x-4 items-center justify-center'>
+                            <div className='flex space-x-2 md:space-x-4 items-center justify-center'>
                                 {project.technologies.map((technology) =>
                                     <Image
-                                        className='h-8 w-8'
+                                        className='h-6 w-6 md:h-8 md:w-8'
                                         key={technology._id}
                                         src={urlFor(technology.image).url()}
                                         alt=""
@@ -55,7 +55,7 @@ const Projects = ({ projects }: Props) => {
                                     />
                                 )}
                             </div>
-                            <p className='text-lg text-center md:text-left'>
+                            <p className='text-md md:text-lg text-center sm:text-left'>
                                 {project.summary}
                             </p>
                         </div>

@@ -15,10 +15,10 @@ const Skills = ({ skills }: Props) => {
             transition={{ duration: 1.5 }}
             className='flex relative flex-col text-center max-w-[2000px] 
             min-h-screen justify-center items-center'>
-            <h3 className='absolute top-16 uppercase tracking-[20px] text-slate-500 text-2xl'>
+            <h3 className='absolute top-16 uppercase tracking-[15px] md:tracking-[20px] text-slate-500 text-2xl'>
                 Skills
             </h3>
-            <h3 className='absolute top-32 uppercase tracking-[3px] text-slate-500 text-sm'>
+            <h3 className='absolute top-28 md:top-32 uppercase tracking-[3px] text-slate-500 text-sm'>
                 Hover over a skill for current preoficiency
             </h3>
             <div className='grid grid-cols-4 gap-2'>
