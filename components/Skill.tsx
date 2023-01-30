@@ -19,16 +19,16 @@ const Skill = ({ directionLeft, skill }:Props) => {
             transition={{ duration: 1.2 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="rounded-full border border-slate-500 object-cover w-24 h-24 
-            filter group-hover:grayscale transition duraton-300 ease-in-out"
+            className="rounded-full border border-slate-500 object-cover w-16 h-16 md:w-24 md:h-24 
+            filter  touch-auto group-hover:grayscale transition duraton-300 ease-in-out"
             src={urlFor(skill.image).url()}
             alt=''
         />
         <div className='absolute opacity-0 group-hover:opacity-80 transition duration-300
-        ease-in-out group-hover:bg-slate-50 h-24 w-24
+        ease-in-out group-hover:bg-slate-50 h-16 w-16 md:h-24 md:w-24
         rounded-full z-0'>
             <div className='flex items-center justify-center h-full'>
-                <p className='text-3xl font-bold text-slate-800 opacity-100'>
+                <p className='text-2xl md:text-3xl font-bold text-slate-800 opacity-100'>
                     {skill.progress}%
                 </p>
             </div>

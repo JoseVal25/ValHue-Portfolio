@@ -32,10 +32,10 @@ const Hero = ({ pageInfo }: Props) => {
                 className='relative rounded-full border-cyan-600 h-32 w-32 mx-auto object-cover'
             />
             <div className='z-20'>
-                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
+                <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[10px] md:tracking-[15px]'>
                     {pageInfo.role}
                 </h2>
-                <h1 className='text-5xl lg:text-6xl font-extrabold px-10'>
+                <h1 className='text-3xl sm:text-5xl lg:text-6xl font-extrabold px-10'>
                     <span className='mr-3'>{text}</span>
                     <Cursor cursorColor='#0891b2' />
                 </h1>

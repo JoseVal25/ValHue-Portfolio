@@ -16,10 +16,10 @@ const WorkExperience = ({ experiences }: Props) => {
         transition={{ duration: 1.5 }} 
         className='h-screen flex relative overflow-hidden flex-col text-left
         max-w-full px-10 justify-evenly mx-auto items-center'>
-        <h3 className='absolute top-16 uppercase tracking-[20px] text-slate-500 text-2xl'>
+        <h3 className='absolute top-16 uppercase tracking-[15px] md:tracking-[20px] text-slate-500 text-2xl'>
             Experience
         </h3>
-        <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory
+        <div className='w-80 md:w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory
           scrollbar scrollbar-track-slate-600/10 scrollbar-thumb-cyan-600/80'>
             {experiences?.map((experience) => (
               <ExperienceCard
