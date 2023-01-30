@@ -56,7 +56,7 @@ const ContactMe = ({ pageInfo }: Props) => {
         <form
           onSubmit={handleSubmit(onSubmit)} 
           className='flex flex-col space-y-2 w-80 sm:w-fit mx-auto'>
-          <div className='flex flex-col sm:flex-row space-x-0 sm:space-x-2 space-y-2 sm:space-y-0'>
+          <div className='flex flex-col sm:flex-row space-x-0 sm:space-x-2 space-y-2 sm:space-y-0 '>
             <input 
               {...register('name')} 
               placeholder="Name" 
